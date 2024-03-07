@@ -1,0 +1,19 @@
+def armstrong(number):
+  length=len(str(number))
+  digit=0
+  sum_power=0
+  while (number>0):
+    digit=number%10
+    sum_power=sum_power+pow(digit,length)
+    number=number//10
+  return sum_power
+
+  
+number=int(input())
+temp_no=number
+result=armstrong(number)
+
+if temp_no==result:
+  print("Armstrong number")
+else:
+  print("Not Armstrong number")
