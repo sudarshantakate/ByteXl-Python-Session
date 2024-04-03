@@ -1,0 +1,17 @@
+#Q1_weight of cloth -2000gm
+#time to be taken- 25min 
+
+#weight of cloth -4000gm
+#time to taken- 45min
+
+weight=int(input())
+if weight<=0:
+  print("Invalid")
+elif weight>=1 and weight <=2000:
+  print("Time instimated:25min")
+elif  weight>=1 and weight <=3000:
+  print("Time instimated:35min")
+elif weight>=1 and weight <=4000:
+  print("Time instimated:45min")
+else:
+  print("Overload")
