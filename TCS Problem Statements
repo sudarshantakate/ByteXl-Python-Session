@@ -64,3 +64,88 @@ while True:
         serve_candies(num_candies)
     # Check if the jar needs to be refilled
         refill_jar()
+
+Q_4) Problem Statement 1 - Given a string S(input consisting) of '' and '#'. The length of the string is variable. The task is to find the minimum number of '*' or '#' to make it a valid string. The string is considered valid if the number of '*' and '#' equals. The '*' and '#' can be at any position in the string.
+
+Note: The output will be a positive or negative integer based on
+
+several '*' and '#' in the input string.
+
+• (*>#) positive integer
+
+• (#>*) negative integer
+
+(*).0
+
+str=input()
+star=0
+hashh=0
+#star=str.count('what we have to count')
+#hashh=str.count('what we have to count')
+for i in str:
+  if i=="*":
+    star+=1
+  else:
+    if i=='#':
+      hashh+=1
+print(star-has)
+
+Q_5)Identify palindrome(String==reverse is called palindrome)
+
+For a given positive number num. identify the palindrome formed by performing the following operation:-
+
+        #add num and its reverse
+        #check whether the sum is palindrome or not.if not, add the sum And its reverse and repeat the process until a palindrome is obtained.
+#code_1
+def reverse_number(n):
+    """Helper function to reverse the digits of a number."""
+    rev = 0
+    while n > 0:
+        rev = rev * 10 + (n % 10)
+        n //= 10
+    return rev
+
+def is_palindrome(n):
+    """Helper function to check if a number is palindrome."""
+    return str(n) == str(n)[::-1]
+
+def find_palindrome(num):
+    """Function to find the palindrome as described."""
+    current = num
+    
+    while True:
+        # Step 1: Add current number with its reverse
+        rev_current = reverse_number(current)
+        sum_value = current + rev_current
+        
+        # Step 2: Check if the sum is a palindrome
+        if is_palindrome(sum_value):
+            return sum_value
+        
+        # Step 3: Update current number to the sum for next iteration
+        current = sum_value
+
+# Example usage:
+num = 87
+result = find_palindrome(num)
+print(f"The palindrome formed is: {result}")
+
+#Code_2
+def ispalindrome(sum):
+    return sum== int(str(sum)[::-1])
+def rev(n):
+    return int(str(n)[::-1])
+    
+n=int(input())
+while(1):
+    n=n+rev(n)
+    if(ispalindrome(n)):
+        print(n)
+        break
+
+Q_3)
+    
+
+
+    
+
